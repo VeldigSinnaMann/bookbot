@@ -4,11 +4,12 @@ def get_book_words(book_text):
     return num_words
 
 def get_letters_used(book_list):
-    book_list = book_list.lower()
-    letters_uesed = {}
+    book_list = book_list.split()
+    letters_used = {}
     for word in book_list:
+        word = word.lower()
         for ch in word:
             if ch.isalpha():
-                letters_uesed[ch.lower()] += 1
-                
+                letters_used[ch] =letters_used.get(ch, 0) + 1
+    return letters_used
 

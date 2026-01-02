@@ -8,5 +8,8 @@ def get_book_text(file_path):
         return f.read()
     
 def main():
-    print(f"Found {get_book_words(get_book_text("books/frankenstein.txt"))} total words")
+    string_book = get_book_text("books/frankenstein.txt")
+    print(f"Found {get_book_words(string_book)} total words")
+    letters_used = get_letters_used(string_book)
+    print(letters_used)
 main()
