@@ -1,5 +1,6 @@
 #main for bookbott
 from stats import get_book_words
+from stats import get_letters_used
 
 #get text function
 def get_book_text(file_path):
